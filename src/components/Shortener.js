@@ -102,9 +102,7 @@ function Shortener() {
   };
 
   const fetchShortenedUrl = async () => {
-    if (!validateFormHandler()) {
-      return;
-    }
+    validateFormHandler()
     ctx.setLoadingHandler(true);
     try {
       const response = await axios.get(
