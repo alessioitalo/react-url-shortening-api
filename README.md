@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/reacturlshorteningapi-1CGUKJvxm)
+- Live Site URL: [Vercel](https://react-url-shortening-api-ochre.vercel.app/)
 
 ## My process
 
@@ -46,8 +46,9 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
+- [Shrtco.de](https://shrtco.de/) - URL shortener API
 - [Axios](https://www.npmjs.com/package/axios) - For HTTP requests
+- [Styled Components](https://styled-components.com/) - For styles
 - [React Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react) - For footer icons
 - [React Loader Spinner](https://www.npmjs.com/package/react-loader-spinner) - For loading animation
 
