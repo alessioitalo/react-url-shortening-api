@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import StatisticsContainer from "./components/StatisticsContainer";
+import Cta from "./components/Cta";
+import Footer from "./components/Footer";
+import Shortener from "./components/Shortener";
+import Context from "./context";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [url, setUrl] = useState();
+  const [loading, setLoading] = useState(false);
+  const [counter, setCounter] = useState();
+  const [data, setData] = useState(Object.keys(localStorage));
+
+  useEffect(() => {
+    setCounter(localStorage.length);
+  }, [counter, data]);
+
+  const setUrlHandler = (url) => {
+    setUrl(url);
+  };
+
+  const setLoadingHandler = (boolean) => {
+    setLoading(boolean);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Context.Provider
+        value={{
+          url,
+          loading,
+          counter,
+          data,
+          setUrlHandler,
+          setLoadingHandler,
+          setData,
+        }}
+      >
+        <Header />
+        <Shortener />
+        <StatisticsContainer />
+      </Context.Provider>
+      <Cta />
+      <Footer />
     </div>
   );
 }
